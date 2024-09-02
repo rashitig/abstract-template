@@ -40,7 +40,7 @@ In our presentation, we will show a glimpse of the current state of our ambitiou
 
 Secondly, we plan to use this case study to reflect upon the interpretation of metrics provided by algorithmic models and their relevance in historical research methodology. We will focus on three key areas: Contextual Sensitivity, Ambiguity Resolution, and Computational Efficiency. By focusing on these aspects, we will provide a comprehensive insight into the models' operational capabilities, particularly in large-scale historical text analysis. Given the challenges of retro-digitized historical data (OCR quality, heterogeneous contents in large collections, etc.), it is necessary to not only select appropriate models and methods to the specific needs of such material but also to create representative ground truth data for OCR, NER, and NEL. Furthermore, scale considerations drive our case study, as some of our use cases consist of millions of pages.
 
-Finally, we will discuss the role of GLAM (galleries, libraries, archives, and museums) institutions as drivers of change and facilitators, especially when it comes to the use of their collections as data (Padilla et al., 2023).
+Finally, we will discuss the role of GLAM (galleries, libraries, archives, and museums) institutions as drivers of change and facilitators, especially when it comes to the use of their collections as data [@padilla_2023_8342171].
 
 ![Pipeline of end-to-end Named Entity Linking.](https://github.com/rashitig/abstract-template/blob/main/images/graph.png?raw=true)
 

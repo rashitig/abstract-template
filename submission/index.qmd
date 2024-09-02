@@ -11,21 +11,16 @@ author:
     affiliations:
       - ETH Zürich Library
   - name: Gentiana Rashiti
-      email: rashitig@ethz.ch
-      affiliations:
-        - ETH Zürich Library
+    email: rashitig@ethz.ch
+    affiliations:
+      - ETH Zürich Library
 keywords:
   - Machine Learning
   - Named Entity Linking
   - Named Entity Recognition
   - Historical Data
   - Natural Language Processing
-abstract: |
-Named Entity Linking (NEL) describes the recognition, disambiguation, and linking of so-called «Named Entities» (such as People, Places, and Organizations) in text. Machine-assisted linking of entities helps to identify historical actors in large source corpora and thus contributes significantly to digital methods in historical research. However, applying NEL to historical data presents unique challenges due to issues ranging from poor OCR and alternate spellings to people in historical texts being under-represented in contemporary databases. Given that we often have only sparse specific information about an entity in its direct context, we are developing a robust, modular, and scalable workflow in which we «embed» the people by the context in which they appear. This gives us more information, enabling disambiguation even when only limited data is present and application of NEL to large text corpora. Such techniques have been used and described in works such as Nozza et al. (2019) and Vasilyev et al., (2022). With developing this pipeline and the corresponding embedding knowledge base(s) of historical entities we want to enable the use of such methods in the Swiss GLAM landscape. 
-key-points:
-  - Key point 1 (1 sentence)
-  - Key point 2 (1 sentence)
-  - Key point 3 (1 sentence)
+abstract: Named Entity Linking (NEL) describes the recognition, disambiguation, and linking of so-called «Named Entities» (such as People, Places, and Organizations) in text. Machine-assisted linking of entities helps to identify historical actors in large source corpora and thus contributes significantly to digital methods in historical research. However, applying NEL to historical data presents unique challenges due to issues ranging from poor OCR and alternate spellings to people in historical texts being under-represented in contemporary databases. Given that we often have only sparse specific information about an entity in its direct context, we are developing a robust, modular, and scalable workflow in which we «embed» the people by the context in which they appear. This gives us more information, enabling disambiguation even when only limited data is present and application of NEL to large text corpora. Such techniques have been used and described in works such as Nozza et al. (2019) and Vasilyev et al., (2022). With developing this pipeline and the corresponding embedding knowledge base(s) of historical entities we want to enable the use of such methods in the Swiss GLAM landscape.
 date: 09-02-2024
 bibliography: references.bib
 ---
@@ -47,7 +42,7 @@ Secondly, we plan to use this case study to reflect upon the interpretation of m
 
 Finally, we will discuss the role of GLAM (galleries, libraries, archives, and museums) institutions as drivers of change and facilitators, especially when it comes to the use of their collections as data (Padilla et al., 2023).
 
-![Pipeline of end-to-end Named Entity Linking.](images/Screenshot 2024-08-24 at 16-37-38 Untitled Diagram.drawio.pdf - Digital History Switzerland 2024.drawio.pdf.png)
+![Pipeline of end-to-end Named Entity Linking.](/home/genta/git/abstract-template/images/graph.png)
 
 ## Conclusion
 Current solutions for NEL need more accuracy and scalability. At the same time, such enrichment processes will become standard processes for GLAM institutions so that they can offer enriched data layers to their users as a service. This raises several challenges: The technical challenge to improve the linking workflow itself, the challenge to document the workflow in a transparent and reproducible form, and finally, the methodological challenge to negotiate and interpret the results at the intersection of GLAM institutions, data science, and historical research.   

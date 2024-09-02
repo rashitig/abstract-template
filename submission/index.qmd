@@ -6,14 +6,15 @@ author:
     email: tarun@ethz.ch
     affiliations:
       - ETH Zürich IT Services
+  - name: Gentiana Rashiti
+      email: rashitig@ethz.ch
+      affiliations:
+        - ETH Zürich Library
   - name: Christiane Sibille
     email: christiane.sibille@library.ethz.ch
     affiliations:
       - ETH Zürich Library
-  - name: Gentiana Rashiti
-    email: rashitig@ethz.ch
-    affiliations:
-      - ETH Zürich Library
+  
 keywords:
   - Machine Learning
   - Named Entity Linking

@@ -7,9 +7,9 @@ author:
     affiliations:
       - ETH Zürich IT Services
   - name: Gentiana Rashiti
-      email: rashitig@ethz.ch
-      affiliations:
-        - ETH Zürich Library
+    email: rashitig@ethz.ch
+    affiliations:
+      - ETH Zürich Library
   - name: Christiane Sibille
     email: christiane.sibille@library.ethz.ch
     affiliations:

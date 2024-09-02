@@ -27,7 +27,7 @@ bibliography: references.bib
 
 ## Introduction
 
-Named Entity Recognition, disambiguation, and linking are pivotal methods in Natural Language Processing (NLP) applied to historical research. These methods present unique and complex challenges in the context of historical texts [@+2023], [@luthra2022unsilencingcolonialarchivesautomated], [@10.1145/3604931]. They grapple with the complexities arising from context-dependent meanings of named entities, as well as the issues of polysemy, homonymy, and naming variations.
+Named Entity Recognition, disambiguation, and linking are pivotal methods in Natural Language Processing (NLP) applied to historical research. These methods present unique and complex challenges in the context of historical texts [@bunout2023], [@luthra2022unsilencingcolonialarchivesautomated], [@10.1145/3604931]. They grapple with the complexities arising from context-dependent meanings of named entities, as well as the issues of polysemy, homonymy, and naming variations.
 
 Historically, solutions ranged from basic string matching to intricate rule-based heuristics. While these methods are still widely used, they often fall short in terms of scalability, generalization, and accuracy, particularly when compared to current machine-learning techniques. Recent advances have seen a shift towards leveraging contextual embeddings to achieve groundbreaking accuracy in these tasks, as evidenced by seminal works such as [@yamada-etal-2016-joint], [@ganea-hofmann-2017-deep], and [@chen2020contextualizedendtoendneuralentity].
 

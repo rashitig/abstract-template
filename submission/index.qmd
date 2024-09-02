@@ -1,82 +1,50 @@
 ---
 submission_id: 499
-title: Digital History Switzerland 2024 submission title
+title: Digital History Switzerland 2024 "From words to numbers. Methodological perspectives on large scale Named Entity Linking"
 author:
-  - name: Petra Huber
-    orcid: 0000-0002-0760-5497
-    email: petra.huber@university.ch
+  - name: Tarun Chadha
+    email: tarun@ethz.ch
     affiliations:
-      - University 1
-  - name: Michel Meier
-    orcid: 0000-0002-7859-8394
-    email: michel.meier@university.edu
+      - ETH Zürich IT Services
+  - name: Christiane Sibille
+    email: christiane.sibille@library.ethz.ch
     affiliations:
-      - University 1
-      - University 2
+      - ETH Zürich Library
+  - name: Gentiana Rashiti
+      email: rashitig@ethz.ch
+      affiliations:
+        - ETH Zürich Library
 keywords:
-  - Keyword 1
-  - Keyword 2
-  - Keyword 3
-  - Keyword 4 (optional)
-  - Keyword 5 (optional)
+  - Machine Learning
+  - Named Entity Linking
+  - Named Entity Recognition
+  - Historical Data
+  - Natural Language Processing
 abstract: |
-  Short abstract of the submission. This is a placeholder for the abstract of the manuscript. It should be between 150 and 250 words. It must not contain any references or unexplained abbreviations.
+Named Entity Linking (NEL) describes the recognition, disambiguation, and linking of so-called «Named Entities» (such as People, Places, and Organizations) in text. Machine-assisted linking of entities helps to identify historical actors in large source corpora and thus contributes significantly to digital methods in historical research. However, applying NEL to historical data presents unique challenges due to issues ranging from poor OCR and alternate spellings to people in historical texts being under-represented in contemporary databases. Given that we often have only sparse specific information about an entity in its direct context, we are developing a robust, modular, and scalable workflow in which we «embed» the people by the context in which they appear. This gives us more information, enabling disambiguation even when only limited data is present and application of NEL to large text corpora. Such techniques have been used and described in works such as Nozza et al. (2019) and Vasilyev et al., (2022). With developing this pipeline and the corresponding embedding knowledge base(s) of historical entities we want to enable the use of such methods in the Swiss GLAM landscape. 
 key-points:
   - Key point 1 (1 sentence)
   - Key point 2 (1 sentence)
   - Key point 3 (1 sentence)
-date: 03-17-2024
+date: 09-02-2024
 bibliography: references.bib
 ---
 
 ## Introduction
 
-This is a placeholder for the extended abstract of the paper. It should be between 1500 and 2000 words (excluding references).
+Named Entity Recognition, disambiguation, and linking are pivotal methods in Natural Language Processing (NLP) applied to historical research. These methods present unique and complex challenges in the context of historical texts (Bunot, Ehrmann, Clavert (2022); Ehrmann et al. (2023); Luthra et al. (2023)). They grapple with the complexities arising from context-dependent meanings of named entities, as well as the issues of polysemy, homonymy, and naming variations.
 
-Check <https://quarto.org/docs/authoring/markdown-basics.html> for more information on how to use markdown, <https://quarto.org/docs/authoring/cross-references.html> for more information on how to use cross-references like this (See @fig-example and @fig-plots), and <https://quarto.org/docs/authoring/footnotes-and-citations.html> for more information on how to use citations like this one [@haber2011, p. 11].
+Historically, solutions ranged from basic string matching to intricate rule-based heuristics. While these methods are still widely used, they often fall short in terms of scalability, generalization, and accuracy, particularly when compared to current machine-learning techniques. Recent advances have seen a shift towards leveraging contextual embeddings to achieve groundbreaking accuracy in these tasks, as evidenced by seminal works such as Yamada et al. (2016), Ganea et al. (2017), and Chen et al. (2020).
 
-::: {#fig-example}
+Vector embeddings are an essential tool used in NLP to represent words as numerical vectors. When applied appropriately, they can capture semantic information of words depending on the context in which they appear. For instance, in sentences such as «I opened an account at the bank» and «Beavers build dams in river banks,» the word «bank» would be embedded differently. On the other hand, the vector embeddings for «I sat down on the chair» and «I lowered myself onto the seat» would be «close» in the vector space, as they contain similar content.
 
-![Figure caption text.](images/placeholder.png)
+Regarding linking named entities in a text, e.g. persons, this would mean that we embed them based on the context in which they appear. If there are two viable options (such as the same first name, last name, and time period) for a match between a name and a person, but the name we are searching for appears in an article about architecture and one of the two options is an architect and one a medical doctor, we can now take into account this semantic context as an additional parameter to calculate a possible match.
 
-:::
+## Methods
+In our presentation, we will show a glimpse of the current state of our ambitious project, which aims to create a robust and scalable pipeline for applying embeddings-based NEL to historical texts. In our work, we focus on three key aspects. Firstly, on embeddings-based linking and disambiguation workflow applied to a historical corpus of Swiss magazines (E-Periodica) that uses Wikipedia, Gemeinsame Normdatei (GND), and – since our primary use cases deal with historical material from Switzerland – the Historical Dictionary of Switzerland (HDS) as reference knowledge bases. This part aims to develop a performant and modular pipeline to recognize named entities in retro-digitized texts and link them to so-called authority files (Normdaten), e.g., the German Authority File (GND). With this workflow, we will help to identify historical actors in source material and contribute to the in-depth FAIRification of large datasets through persistent identifiers on the text level. Our proposed pipeline is modular with respect to the embedding model, enabling performance comparison across different embedding model choices and leaving room for future improved embedding models, which capture semantic similarities even better than current popular open-source models such as BERT.
 
-## Section 1
+Secondly, we plan to use this case study to reflect upon the interpretation of metrics provided by algorithmic models and their relevance in historical research methodology. We will focus on three key areas: Contextual Sensitivity, Ambiguity Resolution, and Computational Efficiency. By focusing on these aspects, we will provide a comprehensive insight into the models' operational capabilities, particularly in large-scale historical text analysis. Given the challenges of retro-digitized historical data (OCR quality, heterogeneous contents in large collections, etc.), it is necessary to not only select appropriate models and methods to the specific needs of such material but also to create representative ground truth data for OCR, NER, and NEL. Furthermore, scale considerations drive our case study, as some of our use cases consist of millions of pages.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+Finally, we will discuss the role of GLAM (galleries, libraries, archives, and museums) institutions as drivers of change and facilitators, especially when it comes to the use of their collections as data (Padilla et al., 2023).
 
-## Quarto Usage
-
-For advanced users, we recommend exploring features as **Code Blocks**: Use triple backticks (```) to create code blocks. Specify the language for syntax highlighting (e.g., ```python`). Quarto lets you run code and embed its output directly into your document. See <https://quarto.org/docs/computations/inline-code.html> for guidance.
-
-```{python}
-#| output: false
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Create some simple synthetic historical data
-np.random.seed(0)
-years = pd.date_range('1900-01-01', periods=120, freq='Y')
-values = np.random.normal(loc=0, scale=1, size=120).cumsum()
-
-data = pd.DataFrame({
-    'Year': years.year,
-    'Value': values
-})
-
-# Save the data to a CSV file
-data.to_csv('data/sample_data.csv', index=False)
-```
-
-```{python}
-#| label: fig-plots
-# Plotting the data
-plt.figure(figsize=(10, 6))
-plt.plot(data['Year'], data['Value'], marker='o')
-plt.title('Synthetic Historical Data')
-plt.xlabel('Year')
-plt.ylabel('Value')
-plt.grid(True)
-plt.show()
-```
+![Pipeline of end-to-end Named Entity Linking.](images/Screenshot 2024-08-24 at 16-37-38 Untitled Diagram.drawio.pdf - Digital History Switzerland 2024.drawio.pdf.png)
